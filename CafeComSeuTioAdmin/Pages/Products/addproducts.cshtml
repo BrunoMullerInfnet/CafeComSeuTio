@@ -1,0 +1,20 @@
+﻿@page
+@model CafeComSeuTioAdmin.Pages.Products.addproductsModel
+@{
+}
+<h1>Adicionando um produto</h1>
+
+<form method="post">
+	<div>
+		<label asp-for="NomeProduto"></label>
+		<input asp-for="NomeProduto" class="form-control" />
+	</div>
+	<button type="submit" class="btn btn-primary">Salvar</button>
+</form>
+
+@if(Model.NomeProduto != null)
+{
+	<div class="alert-success mt-3">
+		Produto @Model.NomeProduto cadastrado com sucesso!
+	</div>
+}
